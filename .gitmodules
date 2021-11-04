@@ -1,3 +1,6 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = https://github.com/shadowrylander/.emacs.d.git
+[submodule "shadowrylander.github.io"]
+	path = shadowrylander.github.io
+	url = https://github.com/shadowrylander/shadowrylander.github.io.git
