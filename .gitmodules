@@ -1,6 +1,7 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = https://github.com/shadowrylander/.emacs.d.git
+	shallow = true
         branch = main
 [submodule "shadowrylander.github.io"]
 	path = shadowrylander.github.io
@@ -10,9 +11,15 @@
 [submodule "syvl"]
 	path = syvl
 	url = https://github.com/shadowrylander/syvl.git
+	shallow = true
         branch = main
 [submodule "rich"]
 	path = rich
 	url = https://github.com/shadowrylander/rich.git
         shallow = true
         branch = master
+[submodule "bakery"]
+	path = bakery
+	url = https://github.com/shadowrylander/bakery.git
+	shallow = True
+	branch = main
