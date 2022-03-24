@@ -8,6 +8,9 @@
 [submodule "bakery"]
 	path = bakery
 	url = https://github.com/syvlorg/bakery.git
-[submodule "richyrich"]
-	path = richyrich
-	url = https://github.com/syvlorg/richyrich.git
+[submodule "rich"]
+	path = rich
+	url = https://github.com/syvlorg/rich.git
+[submodule "sylvorg.github.io"]
+	path = sylvorg.github.io
+	url = https://github.com/sylvorg/sylvorg.github.io
