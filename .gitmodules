@@ -2,15 +2,15 @@
 	path = .emacs.d
 	url = https://github.com/shadowrylander/.emacs.d.git
 	shallow = true
-[submodule "oreo"]
-	path = oreo
-	url = https://github.com/syvlorg/oreo.git
-[submodule "bakery"]
-	path = bakery
-	url = https://github.com/syvlorg/bakery.git
 [submodule "rich"]
 	path = rich
 	url = https://github.com/syvlorg/rich.git
 [submodule "sylvorg.github.io"]
 	path = sylvorg.github.io
 	url = https://github.com/sylvorg/sylvorg.github.io
+[submodule "oreo"]
+	path = oreo
+	url = git@github.com:syvlorg/oreo.git
+[submodule "bakery"]
+	path = bakery
+	url = git@github.com:syvlorg/bakery.git
