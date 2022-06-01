@@ -1,10 +1,3 @@
-[submodule ".emacs.d"]
-	path = .emacs.d
-	url = https://github.com/shadowrylander/.emacs.d.git
-	shallow = true
-[submodule "rich"]
-	path = rich
-	url = https://github.com/syvlorg/rich.git
 [submodule "sylvorg.github.io"]
 	path = sylvorg.github.io
 	url = https://github.com/sylvorg/sylvorg.github.io
@@ -14,3 +7,12 @@
 [submodule "bakery"]
 	path = bakery
 	url = git@github.com:syvlorg/bakery.git
+[submodule "rich"]
+	path = rich
+	url = git@github.com:syvlorg/rich.git
+[submodule "tailapi"]
+	path = tailapi
+	url = git@github.com:syvlorg/tailapi.git
+[submodule "nixpkgs"]
+	path = nixpkgs
+	url = git@github.com:shadowrylander/nixpkgs.git
