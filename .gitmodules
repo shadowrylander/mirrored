@@ -1,18 +1,30 @@
 [submodule "sylvorg.github.io"]
-	path = sylvorg.github.io
+	path = sylvorg/sylvorg.github.io
 	url = https://github.com/sylvorg/sylvorg.github.io
 [submodule "oreo"]
-	path = oreo
+	path = syvlorg/oreo
 	url = git@github.com:syvlorg/oreo.git
 [submodule "bakery"]
-	path = bakery
+	path = syvlorg/bakery
 	url = git@github.com:syvlorg/bakery.git
 [submodule "rich"]
-	path = rich
+	path = syvlorg/rich
 	url = git@github.com:syvlorg/rich.git
 [submodule "tailapi"]
-	path = tailapi
+	path = syvlorg/tailapi
 	url = git@github.com:syvlorg/tailapi.git
-[submodule "nixpkgs"]
-	path = nixpkgs
-	url = git@github.com:shadowrylander/nixpkgs.git
+[submodule "pytest-hy"]
+	path = syvlorg/pytest-hy
+	url = git@github.com:syvlorg/pytest-hy.git
+[submodule "alcremie"]
+	path = syvlorg/alcremie
+	url = git@github.com:syvlorg/alcremie.git
+[submodule "strapper"]
+	path = syvlorg/strapper
+	url = git@github.com:syvlorg/strapper.git
+[submodule "syvlorg/titan"]
+	path = syvlorg/titan
+	url = git@github.com:syvlorg/titan.git
+[submodule "sylvorg/bootstrap"]
+	path = sylvorg/bootstrap
+	url = git@github.com:sylvorg/bootstrap.git
