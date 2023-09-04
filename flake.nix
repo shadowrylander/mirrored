@@ -1,66 +1,56 @@
 {
-    nixConfig = {
-        # Adapted From: https://github.com/divnix/digga/blob/main/examples/devos/flake.nix#L4
-        # extra-substituters = "https://cache.nixos.org/ https://nix-community.cachix.org/";
-        trusted-substituters = "https://cache.nixos.org/";
-        # extra-trusted-public-keys = "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=";
-        trusted-public-keys = "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=";
-        # keep-derivations = true;
-        # keep-outputs = true;
-        extra-experimental-features = "nix-command flakes";
-        # accept-flake-config = true;
-        # show-trace = true;
-        # fallback = true;
-        # auto-optimise-store = true;
-        # builders-use-substitutes = true;
-        # cores = 0;
-        # flake-registry = https://raw.githubusercontent.com/sylvorg/settings/main/flake-registry.json;
-        # allow-unsafe-native-code-during-evaluation = true;
-        # min-free = 262144000;
-        # max-free = 1073741824;
+  nixConfig = {
+    accept-flake-config = true;
+    allow-unsafe-native-code-during-evaluation = true;
+    auto-optimise-store = true;
+    builders-use-substitutes = true;
+    cores = 0;
+    extra-experimental-features =
+      "nix-command flakes impure-derivations recursive-nix";
+    extra-substituters =
+      "https://cache.nixos.org/ https://nix-community.cachix.org";
+    extra-trusted-public-keys =
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=";
+    fallback = true;
+    flake-registry =
+      "https://raw.githubusercontent.com/syvlorg/flake-registry/master/flake-registry.json";
+    keep-derivations = true;
+    keep-outputs = true;
+    max-free = 1073741824;
+    min-free = 262144000;
+    show-trace = true;
+    trusted-public-keys =
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=";
+    trusted-substituters =
+      "https://cache.nixos.org/ https://nix-community.cachix.org";
+    warn-dirty = false;
+  };
+  description = "A flake for all my projects!";
+  inputs = rec {
+    bundle = {
+      url = "git+https://github.com/sylvorg/bundle.git";
+      type = "git";
+      submodules = true;
     };
-    description = "A flake for all my projects!";
-    inputs = rec {
+    valiant.follows = "bundle/valiant";
+    nixpkgs.follows = "bundle/nixpkgs";
 
-        # Prerequisites
-        titan.url = github:syvlorg/titan;
-        settings = {
-            url = github:sylvorg/settings;
-            inputs.titan.follows = "titan";
-        };
+    pyApp-falinks.url =
+      "git+https://github.com/syvlorg/falinks.git";
+    pyPkg-bakery.url =
+      "git+https://github.com/syvlorg/bakery.git";
+    pyApp-strapper.url =
+      "git+https://github.com/syvlorg/strapper.git";
+    pyApp-bootstrap.url =
+      "git+https://github.com/sylvorg/bootstrap.git";
+    pyApp-sylvorg-github-io.url =
+      "git+https://github.com/sylvorg/sylvorg.github.io.git";
 
-        # Python
-        pytest-hy.url = github:syvlorg/pytest-hy;
-        rich.url = github:syvlorg/rich;
-        oreo.url = github:syvlorg/oreo;
-        bakery.url = github:syvlorg/bakery;
-        alcremie.url = github:syvlorg/alcremie;
-        strapper.url = github:syvlorg/strapper;
-        tailapi.url = github:syvlorg/tailapi;
-        bootstrap.url = github:sylvorg/bootstrap;
-
-        # Misc
-        sylvorg-github-io.url = github:sylvorg/sylvorg.github.io;
-
-        # Flake Utilities
-        flake-utils.url = github:numtide/flake-utils;
-        flake-compat = {
-            url = "github:edolstra/flake-compat";
-            flake = false;
-        };
+    flake-utils.url = "github:numtide/flake-utils";
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
     };
-    outputs = inputs@{ self, flake-utils, settings, ... }: with builtins; with settings.lib; with flake-utils.lib; settings.mkOutputs {
-        inherit inputs;
-        pname = "sylveon";
-        inherit (settings) overlay;
-        overlays = j.foldToSet [
-            (mapAttrsToList (n: v: v.overlays or {}) (removeAttrs inputs [ "self" "titan" ]))
-
-            # Use this for manual overrides, where if an input has a custom overlay of another project here that's causing problems,
-            # you can override said overlay manually
-            {
-
-            }
-        ];
-    };
+  };
+  outputs = inputs@{ self, ... }: { pname = "sylveon"; };
 }

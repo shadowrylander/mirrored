@@ -7,24 +7,30 @@
 [submodule "bakery"]
 	path = syvlorg/bakery
 	url = git@github.com:syvlorg/bakery.git
-[submodule "rich"]
-	path = syvlorg/rich
-	url = git@github.com:syvlorg/rich.git
 [submodule "tailapi"]
 	path = syvlorg/tailapi
 	url = git@github.com:syvlorg/tailapi.git
 [submodule "pytest-hy"]
 	path = syvlorg/pytest-hy
 	url = git@github.com:syvlorg/pytest-hy.git
-[submodule "alcremie"]
-	path = syvlorg/alcremie
-	url = git@github.com:syvlorg/alcremie.git
 [submodule "strapper"]
 	path = syvlorg/strapper
 	url = git@github.com:syvlorg/strapper.git
-[submodule "syvlorg/titan"]
-	path = syvlorg/titan
-	url = git@github.com:syvlorg/titan.git
+[submodule "syvlorg/valiant"]
+	path = syvlorg/valiant
+	url = git@github.com:syvlorg/valiant.git
 [submodule "sylvorg/bootstrap"]
 	path = sylvorg/bootstrap
 	url = git@github.com:sylvorg/bootstrap.git
+[submodule "syvlorg/falinks"]
+	path = syvlorg/falinks
+	url = git@github.com:syvlorg/falinks.git
+[submodule "syvlorg/poetry2setup"]
+	path = syvlorg/poetry2setup
+	url = git@github.com:sylvorg/poetry2setup.git
+[submodule "syvlorg/flake-registry"]
+	path = syvlorg/flake-registry
+	url = git@github.com:syvlorg/flake-registry.git
+[submodule "syvlorg/pytest-ignore"]
+	path = syvlorg/pytest-ignore
+	url = git@github.com:syvlorg/pytest-ignore.git
